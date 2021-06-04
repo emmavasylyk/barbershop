@@ -308,6 +308,7 @@ button {
   height: 100%;
   background-color: rgba(82, 150, 255, 0.35);
   opacity: 0;
+  transition: opacity var(--amin-duration) var(--anim-timing-function);
 }
 
 .gallery-item:hover::after {
