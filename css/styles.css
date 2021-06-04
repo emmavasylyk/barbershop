@@ -39,6 +39,7 @@ body {
   width: 163px;
   margin-right: 110px;
   position: relative;
+  cursor: pointer;
 }
 
 .logo-text {
@@ -87,6 +88,7 @@ body {
   padding-top: 46px;
   align-items: center;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .btn-list li:not(:last-child) {
@@ -96,6 +98,7 @@ body {
 button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .appointment {
@@ -110,6 +113,7 @@ button {
   border-radius: 20px;
   border: none;
   transition: box-shadow var(--amin-duration) var(--anim-timing-function);
+  cursor: pointer;
 }
 
 .appointment:hover,
@@ -284,7 +288,6 @@ button {
 
 .gallery-list {
   display: block;
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   margin: -18px;
@@ -295,20 +298,25 @@ button {
   margin: 18px;
 }
 
-.gallery-list-img {
-  position: relative;
-}
-
-.gallery-list-img::before {
-  display: block;
+.gallery-item::after {
+  display: inline-block;
   position: absolute;
   content: ' ';
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(82, 150, 255, 0.35);
+  opacity: 0;
+}
+
+.gallery-item:hover::after {
+  cursor: pointer;
+  opacity: 1;
 }
 
 .gallery-item {
+  position: relative;
   display: block;
   margin: 18px;
   width: 435px;
@@ -334,6 +342,7 @@ button {
   position: relative;
   margin: 0 auto;
   margin-bottom: 37px;
+  cursor: pointer;
 }
 
 .footer-logo-text {
